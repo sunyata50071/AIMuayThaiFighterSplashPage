@@ -1,0 +1,172 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "obvia", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #404040;
+    margin: 0;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 10px red;
+    margin: auto;
+    color: white;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0.167em 0;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+.bottom-text-left-side { 
+    font-weight: 900;
+    color: white;
+    margin: 0 auto;
+}
+
+.subheading {
+    color: #575757;
+    font-weight: 900;  
+    margin-bottom: 0.5em;
+}
+
+.bottom-text-left-side,
+.top-text,
+.subheading {
+    text-transform: uppercase;
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #780000;
+}
+
+/* Flex containers */
+
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+
+.intro { 
+    justify-content: space-between;
+    min-height: 500px;
+    text-align: center;
+    color: #fff;
+    background-image: url("images/dragon4.png");
+    background-size: cover;
+    padding-bottom: 1.5em;
+}
+
+/* Main content */
+   
+.main-content {
+    align-items: center;
+    padding-top: 2.5em;
+}
+
+.img-main {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+/* Form */
+   
+form {
+    background: white;
+}
+   
+input,
+button {
+    font-family: inherit;
+    width: 100%; 
+    border-radius: 5px;   
+}
+
+input {
+    padding: 1em;
+    margin-bottom: 0.75em;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #001524;
+    background-color: #ffbe0b;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #03045e;
+    margin-top: 1em;    
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #669bbc;
+}
+
+/* Cater to different screen sizes */
+
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+    
+    h1 {
+        font-size: 5vw;
+    }
+    
+    h2 {
+        font-size: 2.625rem;
+    }
+    
+    .bottom-text-left-side {
+        font-size: 1.25rem;
+    }
+    
+    .intro,
+    .main-content {
+        width: 50%;
+    }
+    
+    .intro {
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        justify-content: center;
+        padding-top: 0;
+    }
+}
